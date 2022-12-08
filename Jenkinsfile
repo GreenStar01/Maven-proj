@@ -12,8 +12,7 @@ pipeline{
             steps{
                 echo 'Checking out source Code from Repo...'
                 echo "The Environment for Job Execution is ${params.environment}"
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '6fcf4fdc-2307-4ed0-aece-f277e0c30202', url: 'https://github.com/GreenStar01/JAVA-DEMO.git']]])
-            }
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '6fcf4fdc-2307-4ed0-aece-f277e0c30202', url: 'https://github.com/GreenStar01/Maven-proj.git']]])
 
         }
         stage ('Pre-build') {
